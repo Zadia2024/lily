@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form">
+        <input type="number" name="" id="input1"> <br>
+        <input type="number" name="" id="input2"> <br>
+        <input type="submit" value="calculate">
+        <div class="result"></div>
+    </form>
+    <script>
+        document.querySelector('#form').addEventListener('submit',(e)=>{
+            e.preventDefault();
+           let input1 =  document.querySelector('#input1').value;
+           let input2 =  document.querySelector('#input2').value;
+           console.log(input1, input2);
+            // calculate(input1, '+', input2)
+          alert(calculate(input1, input2))
+          
+        let result = calculate(input1, input2)
+        console.log(result);
+        document.querySelector('.result').innerHTML = result ;    
+        })
+
+        function calculate(input1,input2 ){
+            // return `${input1 } + ${input2} `
+           return Number(input1) + Number(input2)
+        }
+        </SCript>
+</body>
+</html>
